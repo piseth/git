@@ -1,0 +1,49 @@
+[user]
+	name = 
+	email = 
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	fa = fetch --all
+	lg = log -p
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	gl = log --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	# Log display from screencast, with train tracks.
+	l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	# Alternate log display from Scott Chacon
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	# Other useful aliases:
+	unstage = reset HEAD
+	staged = diff --cached
+	unstaged = diff
+	current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+[apply]
+	whitespace = warn
+[merge]
+	tool = meld
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+[color "diff"]
+	old = yellow
+[help]
+	autocorrect = 1
+[status]
+	submodule = 1
+[core]
+	editor = vi
+	excludesfile = $HOME/.gitignore_global
+	autocrlf = input
+[push]
+	default = simple
+[rerere]
+	enabled = 1
+[credential]
+	helper = cache --timeout=86400
